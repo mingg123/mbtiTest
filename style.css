@@ -1,0 +1,22 @@
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  display: none;
+}
+
+.result {
+  display: none;
+}
+
+#img {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.share {
+  margin: 0 auto;
+}
