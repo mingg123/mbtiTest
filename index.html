@@ -87,23 +87,173 @@
     <script>
       var num = 1;
       var q = {
-        1: { title: "문제 1번", type: "EI", up: "E", down: "I" },
-        2: { title: "문제 2번", type: "SN", up: "S", down: "N" },
-        3: { title: "문제 3번", type: "TF", up: "T", down: "F" },
-        4: { title: "문제 4번", type: "JP", up: "J", down: "P" },
-        5: { title: "문제 5번", type: "EI", up: "E", down: "I" },
-        6: { title: "문제 6번", type: "SN", up: "S", down: "N" },
-        7: { title: "문제 7번", type: "TF", up: "T", down: "F" },
-        8: { title: "문제 8번", type: "JP", up: "J", down: "P" },
-        9: { title: "문제 9번", type: "EI", up: "E", down: "I" },
-        10: { title: "문제 10번", type: "SN", up: "S", down: "N" },
-        11: { title: "문제 11번", type: "TF", up: "T", down: "F" },
-        12: { title: "문제 12번", type: "JP", up: "J", down: "P" },
+        1: {
+          title: "회사 들어온 지 3개월 된 신입이다. 점심시간이 되었다. ",
+          type: "EI",
+          up: "'식사같이 하실래요?' 돌아다니며 팀원들한테 물어본다.",
+          down: "'점심 같이 먹으려나..?' 혼자 생각한다.",
+        },
+        2: {
+          title:
+            "처음 해보는 거나 모르는 업무를 맡게 되었을 때 어떻게 행동하는가?",
+          type: "SN",
+          up:
+            "남들이 했던 흔적을 찾아보거나 이전 담당자 혹은 선배한테 물어본다.",
+          down: "'어? 이렇게 하면 될 것 같은데?' 내가 생각한 방법대로 한다.",
+        },
+        3: {
+          title: "회사에서 나는 ",
+          type: "TF",
+          up:
+            "나에게 너무 많은 업무가 주어져 매일 12시까지 야근을 반복한다. 하지만 사람들이 나의 능력을 인정해 준다.",
+          down:
+            "하는 일이 너무 없다. 매일 칼퇴 한다. 조금 눈치가 보이지만 월급루팡 최고다. ",
+        },
+        4: {
+          title:
+            "어제 오후 10시까지 야근하고 다음 날 업무를 하려고 한다. 뭐였더라? ",
+          type: "JP",
+          up: "미리 하고 있는 개발 혹은 프로젝트",
+          down: "어제 마무리하던 급한 이슈들",
+        },
+        5: {
+          title: "퇴근하고 집으로 가는 길, 버스정류장에 팀 사람이 보인다. ",
+          type: "EI",
+          up:
+            "먼저 다가가서 '수연 씨~ 퇴근하시나 보네요' 인사하고 시시콜콜 얘기한다.",
+          down: "퇴근해서까지 팀 사람 마주치고 싶지 않다. 인사하지 않는다.",
+        },
+        6: {
+          title:
+            "눈을 떠보니 대학교(원) 막 학기가 되었다. 지금 다니고 있던 회사에서 스카웃 제의가 들어왔고 거절하면 다신 기회는 없다. 당신의 선택은?",
+          type: "SN",
+          up:
+            "대충 어떤 분위기 인지도 알고. 하는 업무도 괜찮으니 이 회사를 다니겠다.",
+          down: "아니다. 기회를 잃더라도 새로운 곳을 지원할 것이다.",
+        },
+        7: {
+          title: "경쟁사 회사가 대박이 났다. 내가 가장 먼저 든 생각은?",
+          type: "TF",
+          up:
+            "오늘 밤 경쟁사 회사가 출시한 제품을 분석하고 대박 난 원인에 대해 파악해야지",
+          down: "나도 저 회사로 이직하고 싶다.",
+        },
+        8: {
+          title: "퇴사를 해야겠다고 마음먹었다. 당신의 행동은?",
+          type: "JP",
+          up: "모든 계획을 철저히 짜고 퇴사한다.",
+          down: "우선 퇴사하고 철저하게 계획한다.",
+        },
+        9: {
+          title:
+            "팀이나 본부가 개편되면서 새로운 팀에 가게 되었다. 가장 먼저 하는 나의 행동은?",
+          type: "EI",
+          up: "일단 새로운 팀 사람들을 살펴보며 인사한다. ",
+          down: "새로운 팀에서 적응하기 위한 매뉴얼이나 공식 문서를 찾는다.",
+        },
+        10: {
+          title: "팀원과 회의하던 도중 내가 알고 있는 것과 다르게 설명한다.",
+          type: "SN",
+          up: "이해가 안 가는데 뭐 맞는 말일 테니 일단 듣자.",
+          down:
+            "엥? 저게 저거라고? 왜 저거인 거지? 난 이해가 안가. 내 생각은 저게 전혀 아닌데? 물어볼까",
+        },
+        11: {
+          title: "갑자기 우리 회사가 망하기 직전이라 한다. ",
+          type: "TF",
+          up: "'이런 게 바로 부도인가? '",
+          down:
+            "'앞으로 어떡하지..' 미래에 대한 걱정과 함께 두려움이 느껴진다.",
+        },
+        12: {
+          title:
+            "업무를 진행하면서 긴가 민가 헷갈리는 부분이 있다. 기한은 내일까지다. 당신의 행동은?",
+          type: "JP",
+          up: "우선 빠르게 판단하고 추후 고친다.",
+          down: "기한을 조금 더 달라고 요청하고 조금 더 고민해 본다.",
+        },
       };
       var result = {
-        ISTJ: { animal: "하마", explan: "하마 설명", img: "lion.jpg" },
-        ENFP: { animal: "호랑이", explan: "호랑이 설명", img: "lion.jpg" },
-        ENTJ: { animal: "사자", explan: "사자 설명", img: "lion.jpg" },
+        ISTJ: {
+          animal: "청렴결백 논리주의자(ISTJ)",
+          explan: "하마 설명",
+          img: "lion.jpg",
+        },
+        ISFJ: {
+          animal: "용감한 수호자(ISFJ)",
+          explan: "설명",
+          img: "lion.jpg",
+        },
+        INFJ: {
+          animal: "선의의 옹호자(INFJ)",
+          explan: "호랑이 설명",
+          img: "lion.jpg",
+        },
+        INTJ: {
+          animal: "용의주도한 전략가(INTJ)",
+          explan: "사자 설명",
+          img: "lion.jpg",
+        },
+        ISTP: {
+          animal: "만능 재주꾼(ISTP)",
+          explan: "하마 설명",
+          img: "lion.jpg",
+        },
+        ISFP: {
+          animal: "호기심 많은 예술가(ISFP)",
+          explan: "설명",
+          img: "lion.jpg",
+        },
+        INFP: {
+          animal: "열정적인 중개자(INFP)",
+          explan: "호랑이 설명",
+          img: "lion.jpg",
+        },
+        INTP: {
+          animal: "논리적인 사색가(INTP)",
+          explan: "사자 설명",
+          img: "lion.jpg",
+        },
+        ESTP: {
+          animal: "모험을 즐기는 사업가(ESTP)",
+          explan: "하마 설명",
+          img: "lion.jpg",
+        },
+        ESFP: {
+          animal: "자유로운 영혼의 연예인(ESFP)",
+          explan: "설명",
+          img: "lion.jpg",
+        },
+        ENFP: {
+          animal: "재기발랄한 활동가(ENFP)",
+          explan: "호랑이 설명",
+          img: "lion.jpg",
+        },
+        ENTP: {
+          animal: "논쟁을 즐기는 변론가(ENTP)",
+          explan: "사자 설명",
+          img: "lion.jpg",
+        },
+        ESTJ: {
+          animal: "엄격한 관리자(ESTJ)",
+          explan: "하마 설명",
+          img: "lion.jpg",
+        },
+        ESFJ: {
+          animal: "사교적인 외교관(ESFJ)",
+          explan: "설명",
+          img: "lion.jpg",
+        },
+        ENFJ: {
+          animal: "정의로운 사회운동가(ENFJ)",
+          explan: "호랑이 설명",
+          img: "lion.jpg",
+        },
+        ENTJ: {
+          animal: "대담한 통솔자(ENTJ)",
+          explan: "사자 설명",
+          img: "lion.jpg",
+        },
       };
       function start() {
         $(".start").hide();
