@@ -3,10 +3,25 @@ article {
   flex-direction: column;
 }
 
+.start {
+  font-family: 'Nanum Pen Script', cursive;
+}
+.progress-bar{
+  background-color : black
+}
+.btn{
+  background-color : #808080;
+  border-color :  #808080
+}
 .question {
   display: none;
 }
-
+.questionMain {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
+}
 .result {
   display: none;
 }
@@ -20,3 +35,79 @@ article {
 .share {
   margin: 0 auto;
 }
+
+.questionMain:before{
+  color: black;
+  content:'"';
+  font-size: 30px;
+}
+.questionMain:after {
+  color: black;
+  content:'"';
+  font-size: 30px;
+}
+
+
+.arrow_box, .arrow_downbox{
+	position: relative;
+	background: #ffffff;
+	border: 2px solid #0c0e0f;
+  border-radius:  20px 20px 20px 20px;
+}
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 90%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.arrow_box:before {
+	border-color: rgba(12, 14, 15, 0);
+	border-top-color: #0c0e0f;
+	border-width: 13px;
+	margin-left: -13px;
+}
+
+.arrow_downbox{
+	position: relative;
+	background: #ffffff;
+	border: 2px solid #0c0e0f;
+  border-radius:  20px 20px 20px 20px;
+}
+.arrow_downbox:after, .arrow_downbox:before {
+	top: 100%;
+	left: 10%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_downbox:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.arrow_downbox:before {
+	border-color: rgba(12, 14, 15, 0);
+	border-top-color: #0c0e0f;
+	border-width: 13px;
+	margin-left: -13px;
+}
+
+
+
+

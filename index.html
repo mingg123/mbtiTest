@@ -23,6 +23,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <!-- 폰트 추가 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
   </head>
   <body class="container">
     <article class="start">
@@ -36,19 +39,21 @@
         <div
           class="progress-bar"
           role="progressbar"
-          style="width: calc(100 / 12 * 1%)"
+          style="background-color : black" 
         ></div>
       </div>
 
-      <h2 id="title" class="text-center mt-5">문제</h2>
+      <h2 id="title" class="questionMain">문제</h2>
 
       <input id="type" type="hidden" value="EI" />
-      <button id="up" type="button" class="btn btn-primary mt-5">
+ 
+      <button id="up" type="button" class="arrow_box mt-5" style="float: right">
         Primary
       </button>
-      <button id="down" type="button" class="btn btn-primary mt-5">
+      <button id="down" type="button" class="arrow_downbox mt-5" style="float: left">
         Primary
       </button>
+
     </article>
     <article class="result">
       <img id="img" class="rounded-circle mt-5" src="test.jpg" alt="item" />
@@ -95,17 +100,17 @@
       var num = 1;
       var q = {
         1: {
-          title: "회사 들어온 지 3개월 된 신입이다. 점심시간이 되었다. ",
+          title:  "점심시간, 나는 회사 입사한 지 3개월 된 신입이다.",
           type: "EI",
-          up: "'식사같이 하실래요?' 돌아다니며 팀원들한테 물어본다.",
+          up: "'점심 같이 드실래요?' 돌아다니며 팀원들한테 물어본다.",
           down: "'점심 같이 먹으려나..?' 혼자 생각한다.",
         },
         2: {
           title:
-            "처음 해보는 거나 모르는 업무를 맡게 되었을 때 어떻게 행동하는가?",
+            "새로운 업무를 맡게 되었을 때 어떻게 행동하는가?",
           type: "SN",
           up:
-            "남들이 했던 흔적을 찾아보거나 이전 담당자 혹은 선배한테 물어본다.",
+            "남들이 했던 히스토리를 찾아보거나 이전 담당자 혹은 선배한테 물어본다.",
           down: "'어? 이렇게 하면 될 것 같은데?' 내가 생각한 방법대로 한다.",
         },
         3: {
@@ -118,7 +123,7 @@
         },
         4: {
           title:
-            "어제 오후 10시까지 야근하고 다음 날 업무를 하려고 한다. 뭐였더라? ",
+            "어제 오후 10시까지 야근하고 다음 날, 오전 업무를 하려고 한다. 어떤 일인가? ",
           type: "JP",
           up: "미리 하고 있는 개발 혹은 프로젝트",
           down: "어제 마무리하던 급한 이슈들",
@@ -127,16 +132,16 @@
           title: "퇴근하고 집으로 가는 길, 버스정류장에 팀 사람이 보인다. ",
           type: "EI",
           up:
-            "먼저 다가가서 '수연 씨~ 퇴근하시나 보네요' 인사하고 시시콜콜 얘기한다.",
+            "'수연 씨~ 퇴근하시나 보네요' 먼저 아는 척 한다.",
           down: "퇴근해서까지 팀 사람 마주치고 싶지 않다. 인사하지 않는다.",
         },
         6: {
           title:
-            "눈을 떠보니 대학교(원) 막 학기가 되었다. 지금 다니고 있던 회사에서 스카웃 제의가 들어왔고 거절하면 다신 기회는 없다. 당신의 선택은?",
+            "출퇴근 시간을 9 to 6 에서 12 to 9로 바꾸어 한 달간 시행한다고 한다.",
           type: "SN",
           up:
-            "대충 어떤 분위기 인지도 알고. 하는 업무도 괜찮으니 이 회사를 다니겠다.",
-          down: "아니다. 기회를 잃더라도 새로운 곳을 지원할 것이다.",
+            "지금 출퇴근 시간이 좋다. 바꾸는 것 반대한다.",
+          down: "뭐가 더 좋을지 모르니 바꾸는 것 찬성한다.",
         },
         7: {
           title: "경쟁사 회사가 대박이 났다. 내가 가장 먼저 든 생각은?",
@@ -166,18 +171,18 @@
             "엥? 저게 저거라고? 왜 저거인 거지? 난 이해가 안가. 내 생각은 저게 전혀 아닌데? 물어볼까",
         },
         11: {
-          title: "갑자기 우리 회사가 망하기 직전이라 한다. ",
+          title: "같이 일하고 싶지 않은 사람은?",
           type: "TF",
-          up: "'이런 게 바로 부도인가? '",
+          up: "이해력과 능력은 뛰어나지만 예의가 없고 부정적인 사람",
           down:
-            "'앞으로 어떡하지..' 미래에 대한 걱정과 함께 두려움이 느껴진다.",
+            "예의가 바르고 긍정적이지만 능력이 부족하여 일을 못하는 사람",
         },
         12: {
           title:
-            "업무를 진행하면서 긴가 민가 헷갈리는 부분이 있다. 기한은 내일까지다. 당신의 행동은?",
+            "새로운 프로젝트 맡게 되었고 기한은 한달이 주어졌다. 당신이 드는 생각은?",
           type: "JP",
-          up: "우선 빠르게 판단하고 추후 고친다.",
-          down: "기한을 조금 더 달라고 요청하고 조금 더 고민해 본다.",
+          up: "한 달 동안 무슨 일이 있을지 모르니 미리미리 한다.",
+          down: "한 달이나 남았으니 여유를 가지고 쉬엄쉬엄한다.",
         },
       };
       //결과
