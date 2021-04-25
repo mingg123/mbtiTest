@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>직장인 캐릭터 테스트</title>
+    <title>직장인 성향 테스트</title>
     <meta
       name="description"
-      content="나랑 꼭 닮은 직장인 캐릭터를 MBTI 기반으로 추천해주는 사이트"
+      content="나랑 꼭 닮은 직장인 성향을 MBTI 기반으로 추천해주는 사이트"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="페이지 제목" />
-    <meta property="og:description" content="페이지 설명" />
+    <meta property="og:title" content="직장인 유형 MBTI 테스트" />
+    <meta property="og:description" content="나는 회사에서 어떤 성향일까?" />
     <meta
       property="og:image"
-      content="https://minggmbti.netlify.app/lion.jpg"
+      content="https://minggmbti.netlify.app/test.jpg"
     />
     <meta property="og:url" content="https://minggmbti.netlify.app/" />
     <link
@@ -26,7 +26,7 @@
   </head>
   <body class="container">
     <article class="start">
-      <h1 class="mt-5 text-center">나랑 꼭 닮은 직장용 캐릭터는?</h1>
+      <h1 class="mt-5 text-center">나랑 꼭 닮은 직장인 본캐는?</h1>
       <button type="button" class="btn btn-primary mt-5" onclick="start();">
         테스트 시작하기
       </button>
@@ -39,7 +39,9 @@
           style="width: calc(100 / 12 * 1%)"
         ></div>
       </div>
+
       <h2 id="title" class="text-center mt-5">문제</h2>
+
       <input id="type" type="hidden" value="EI" />
       <button id="up" type="button" class="btn btn-primary mt-5">
         Primary
@@ -49,9 +51,14 @@
       </button>
     </article>
     <article class="result">
-      <img id="img" class="rounded-circle mt-5" src="lion.jpg" alt="animal" />
-      <h2 id="animal" class="text-center mt-5">캐릭터 이름</h2>
-      <h3 id="explan" class="text-center mt-5">설명</h3>
+      <img id="img" class="rounded-circle mt-5" src="test.jpg" alt="item" />
+      <h2 id="item" class="text-center mt-5">캐릭터 이름</h2>
+      <h3 id="subTitle" class="text-center mt-5">설명</h3>
+      <h4 class="mt-5 text-center">업무 성향</h4>
+      <h5 id="workexplain" class="text-center mt-5" name="업무 성향"></h5>
+      <h6 class="mt-5 text-center">성격 혹은 대인관계</h6>
+      <h7 id="perexplain" class="text-center mt-5" name="성격 혹은 대인관계">
+      </h7>
 
       <!-- Go to www.addthis.com/dashboard to customize your tools -->
       <div class="share addthis_inline_share_toolbox"></div>
@@ -173,86 +180,93 @@
           down: "기한을 조금 더 달라고 요청하고 조금 더 고민해 본다.",
         },
       };
+      //결과
       var result = {
         ISTJ: {
-          animal: "청렴결백 논리주의자(ISTJ)",
-          explan: "하마 설명",
-          img: "lion.jpg",
+          item: "청렴결백 논리주의자(ISTJ)",
+          subTitle: "무뚝뚝 그 자체! 로봇인가? 동료인가?",
+          workexplain:
+            "매사에 꼼꼼하게 업무를 임하고 책임감이 강하다. 함께 일할 때 신뢰할 수 있는 사람으로써 계획한 것은 반드시 지키려는 원칙 주의자! 논리적이고 객관적이며 일처리를 할 때 냉철하고 신중하다. 다만 새로운 변화를 선호하진 않는다.",
+          perexplain:
+            "비교적 조용하고 내성적인 타입이다. 허나 자기 마음에 들어하는 사람은 챙기고 끝까지 의리를 지키는 타입! 다만 내향적이기 때문에 다른 사람의 감정을 이해하는 능력이 조금 부족해서 남이 보내는 신호를 포착하는데 조금 어려움을 겪을 수 있다.",
+          img: "test.jpg",
         },
         ISFJ: {
-          animal: "용감한 수호자(ISFJ)",
-          explan: "설명",
-          img: "lion.jpg",
+          item: "용감한 수호자(ISFJ)",
+          subTitle: "설명",
+          img: "test.jpg",
         },
         INFJ: {
-          animal: "선의의 옹호자(INFJ)",
-          explan: "호랑이 설명",
-          img: "lion.jpg",
+          item: "선의의 옹호자(INFJ)",
+          subTitle: "호랑이 설명",
+          img: "test.jpg",
         },
         INTJ: {
-          animal: "용의주도한 전략가(INTJ)",
-          explan: "사자 설명",
-          img: "lion.jpg",
+          item: "용의주도한 전략가(INTJ)",
+          subTitle: "INTJ 설명",
+          img: "test.jpg",
         },
         ISTP: {
-          animal: "만능 재주꾼(ISTP)",
-          explan: "하마 설명",
-          img: "lion.jpg",
+          item: "만능 재주꾼(ISTP)",
+          subTitle: "ISTP 설명",
+          img: "test.jpg",
         },
         ISFP: {
-          animal: "호기심 많은 예술가(ISFP)",
-          explan: "설명",
-          img: "lion.jpg",
+          item: "호기심 많은 예술가(ISFP)",
+          subTitle: "ISFP 설명",
+          img: "test.jpg",
         },
         INFP: {
-          animal: "열정적인 중개자(INFP)",
-          explan: "호랑이 설명",
-          img: "lion.jpg",
+          item: "열정적인 중개자(INFP)",
+          subTitle: "INFP 설명",
+          img: "test.jpg",
         },
         INTP: {
-          animal: "논리적인 사색가(INTP)",
-          explan: "사자 설명",
-          img: "lion.jpg",
+          item: "논리적인 사색가(INTP)",
+          subTitle: "INTP 설명",
+          img: "test.jpg",
         },
         ESTP: {
-          animal: "모험을 즐기는 사업가(ESTP)",
-          explan: "하마 설명",
-          img: "lion.jpg",
+          item: "모험을 즐기는 사업가(ESTP)",
+          subTitle: "ESTP 설명",
+          img: "test.jpg",
         },
         ESFP: {
-          animal: "자유로운 영혼의 연예인(ESFP)",
-          explan: "설명",
-          img: "lion.jpg",
+          item: "자유로운 영혼의 연예인(ESFP)",
+          subTitle: "ESFP 설명",
+          img: "test.jpg",
         },
         ENFP: {
-          animal: "재기발랄한 활동가(ENFP)",
-          explan: "호랑이 설명",
-          img: "lion.jpg",
+          item: "재기발랄한 활동가(ENFP)",
+          subTitle: "ENFP 설명",
+          img: "test.jpg",
         },
         ENTP: {
-          animal: "논쟁을 즐기는 변론가(ENTP)",
-          explan: "사자 설명",
-          img: "lion.jpg",
+          item: "논쟁을 즐기는 변론가(ENTP)",
+          subTitle: "ENTP 설명",
+          img: "test.jpg",
         },
         ESTJ: {
-          animal: "엄격한 관리자(ESTJ)",
-          explan: "하마 설명",
-          img: "lion.jpg",
+          item: "엄격한 관리자(ESTJ)",
+          subTitle: "ESTJ 설명",
+          workexplain: "ESTJJJ",
+          perexplain: "ESTJJ",
+          img: "test.jpg",
         },
         ESFJ: {
-          animal: "사교적인 외교관(ESFJ)",
-          explan: "설명",
-          img: "lion.jpg",
+          item: "사교적인 외교관(ESFJ)",
+          subTitle: "ESFJ 설명",
+          img: "test.jpg",
         },
         ENFJ: {
-          animal: "정의로운 사회운동가(ENFJ)",
-          explan: "호랑이 설명",
-          img: "lion.jpg",
+          item: "정의로운 사회운동가(ENFJ)",
+          subTitle: "ENFJ 설명",
+          img: "test.jpg",
         },
         ENTJ: {
-          animal: "대담한 통솔자(ENTJ)",
-          explan: "사자 설명",
-          img: "lion.jpg",
+          item: "대담한 통솔자(ENTJ)",
+          subTitle: "ENTJ 설명",
+          img: "test.jpg",
         },
       };
       function start() {
@@ -284,8 +298,10 @@
           $("#JP").val() < 2 ? (mbti += "P") : (mbti += "J");
           console.log(mbti);
           $("#img").attr("src", result[mbti]["img"]);
-          $("#animal").html(result[mbti]["animal"]);
-          $("#explan").html(result[mbti]["explan"]);
+          $("#item").html(result[mbti]["item"]);
+          $("#subTitle").html(result[mbti]["subTitle"]);
+          $("#workexplain").html(result[mbti]["workexplain"]);
+          $("#perexplain").html(result[mbti]["perexplain"]);
         } else {
           $(".progress-bar").attr(
             "style",
