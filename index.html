@@ -65,7 +65,7 @@
     <article class="result">
       <h3 id="subTitle" class="subtitle">설명</h3>
       <img id="img" class="rounded-circle mt-5" src="test.jpg" alt="item" />
-      <h2 id="item" class="text-center mt-5">캐릭터 이름</h2>
+      <!-- <h2 id="item" class="text-center mt-5">캐릭터 이름</h2> -->
       <h4 class="resulttitle">업무 성향</h4>
       <h5 class="resultcontent" id="workexplain" name="업무 성향"></h5>
       <h6 class="resulttitle">성격 혹은 대인관계</h6>
@@ -326,7 +326,7 @@
             "평소에 부지런하기 때문에 게으르거나, 일을 잘 못 하거나, 목표가 없는 사람들을 보면 답답함을 느낀다. 허나 시간이 지날수록 그들을 이해하고 받아드리려고 노력하는 편이다. 추진력이 매우 좋고 미래의 가능성보다 현재를 중요시하는 편이다. 업무에서 좋은 성과를 내는 편이며 이들이 가장 어려워하는 것은 타인의 감정에 공감해야 하는 상황이다. ",
           goodRel: "ISFP",
           badRel: "ENFJ",
-          img: "test.jpg",
+          img: "ant.png",
         },
         ESFJ: {
           item: "사교적인 외교관(ESFJ)",
@@ -391,7 +391,7 @@
           $("#JP").val() < 2 ? (mbti += "P") : (mbti += "J");
           console.log(mbti);
           $("#img").attr("src", result[mbti]["img"]);
-          $("#item").html(result[mbti]["item"]);
+          // $("#item").html(result[mbti]["item"]);
           $("#subTitle").html(result[mbti]["subTitle"]);
           $("#workexplain").html(result[mbti]["workexplain"]);
           $("#perexplain").html(result[mbti]["perexplain"]);
