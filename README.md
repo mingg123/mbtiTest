@@ -1,5 +1,10 @@
 # MBTI 기반 성격 유형 테스트 
 
+
+```
+https://minggmbti.netlify.app/
+```
+
 # Demo
 
 ![image](https://user-images.githubusercontent.com/52990629/121812491-e5606480-cca2-11eb-9ba5-eec08002fa0b.png)
