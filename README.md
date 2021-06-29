@@ -7,9 +7,12 @@ https://minggmbti.netlify.app/
 
 # Demo
 
-![image](https://user-images.githubusercontent.com/52990629/121812491-e5606480-cca2-11eb-9ba5-eec08002fa0b.png)
+![image](https://user-images.githubusercontent.com/52990629/123792380-8134d600-d91b-11eb-82a0-9b1eaade2023.png)
 
-![image](https://user-images.githubusercontent.com/52990629/121812500-f1e4bd00-cca2-11eb-82f9-a7c6da7ecb05.png)
+![image](https://user-images.githubusercontent.com/52990629/123792474-9ad61d80-d91b-11eb-8750-d80c64d18890.png)
+
+
+![image](https://user-images.githubusercontent.com/52990629/123792435-914cb580-d91b-11eb-97b8-e94508b002da.png)
 
 # Env
 
