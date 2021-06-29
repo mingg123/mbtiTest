@@ -17,15 +17,16 @@ Main 화면
 
 질문 화면            
 
-![image](https://user-images.githubusercontent.com/52990629/123792474-9ad61d80-d91b-11eb-8750-d80c64d18890.png)            
+![image](https://user-images.githubusercontent.com/52990629/123793146-5d25c480-d91c-11eb-81df-406297d1c922.png)                      
 
 
 
+                        
 결과 화면              
 
              
-![image](https://user-images.githubusercontent.com/52990629/123792435-914cb580-d91b-11eb-97b8-e94508b002da.png)                    
-
+![image](https://user-images.githubusercontent.com/52990629/123793199-6adb4a00-d91c-11eb-970a-5b5ccafd027b.png)                                               
+                       
 # Env
 
 ```
