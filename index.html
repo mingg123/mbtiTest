@@ -33,7 +33,12 @@
   <body class="container">
     <article class="start">
       <h1 class="mt-5 text-center">나는 회사에서 어떤 벌레인가?</h1>
-      <button type="button" class="btn btn-primary mt-5" onclick="start();">
+      <button
+        type="button"
+        style="background-color: #00bfff; color: white; border: #00bfff"
+        class="btn btn-primary mt-5"
+        onclick="start();"
+      >
         테스트 시작하기
       </button>
     </article>
@@ -70,6 +75,22 @@
       <h5 class="resultcontent" id="workexplain" name="업무 성향"></h5>
       <h6 class="resulttitle">성격 혹은 대인관계</h6>
       <h7 class="resultcontent" id="perexplain" name="성격 혹은 대인관계"> </h7>
+
+      <!-- <button
+        style="margin-bottom: 40px"
+        class="btn btn-primary mt-5"
+        onclick="reset();"
+      >
+        다시 테스트 하기!
+      </button> -->
+
+      <div class="back">
+        <div class="button_base b03_skewed_slide_in">
+          <div>다시 테스트 하기!</div>
+          <div></div>
+          <div onclick="reset();">다시 테스트 하기!</div>
+        </div>
+      </div>
 
       <!-- Go to www.addthis.com/dashboard to customize your tools -->
       <div class="share addthis_inline_share_toolbox"></div>
@@ -368,6 +389,27 @@
         next();
       }
 
+      function reset() {
+        num = 1;
+        $("#EI").val("");
+        $("#SN").val("");
+        $("#TF").val("");
+        $("#JP").val("");
+
+        $(".progress-bar").attr(
+          "style",
+          "width: calc(100 / 12 * " + num + "%)"
+        );
+        $(".question").show();
+        $(".result").hide();
+        $("#img").hide();
+        $("#subTitle").hide();
+        $("#workexplain").hide();
+        $("#perexplain").hide();
+        $("#title").html(q[num]["title"]);
+        next();
+      }
+
       //위의 버튼 클릭 시 점수 계산
       $("#up").click(function () {
         var type = $("#type").val();
@@ -384,6 +426,10 @@
         if (num == 13) {
           $(".question").hide();
           $(".result").show();
+          $("#img").show();
+          $("#subTitle").show();
+          $("#workexplain").show();
+          $("#perexplain").show();
           var mbti = "";
           $("#EI").val() < 2 ? (mbti += "I") : (mbti += "E");
           $("#SN").val() < 2 ? (mbti += "N") : (mbti += "S");
